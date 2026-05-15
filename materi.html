@@ -122,23 +122,275 @@
         <section class="content-section" id="jurnal">
           <h2>📝 Jurnal Umum</h2>
           <p class="section-desc">Pencatatan transaksi keuangan secara kronologis</p>
-          <p>Jurnal umum adalah buku catatan pertama (book of original entry) tempat semua transaksi keuangan dicatat secara kronologis. Setiap transaksi harus memiliki total Debit = total Kredit.</p>
-          <h3>Format Jurnal Umum</h3>
+          <p>Jurnal umum adalah buku catatan pertama <em>(book of original entry)</em> tempat semua transaksi keuangan dicatat secara kronologis. Setiap transaksi harus memiliki total Debit = total Kredit — prinsip ini disebut <strong>double-entry bookkeeping</strong>.</p>
+
+          <div class="info-box info">
+            <div class="info-box-icon">📌</div>
+            <div class="info-box-content">
+              <strong>Langkah membuat jurnal:</strong><br>
+              1. Baca soal cerita dengan teliti<br>
+              2. Identifikasi akun apa saja yang terpengaruh<br>
+              3. Tentukan apakah akun tersebut bertambah atau berkurang<br>
+              4. Tentukan posisi Debit atau Kredit berdasarkan saldo normal<br>
+              5. Pastikan total Debit = total Kredit
+            </div>
+          </div>
+
+          <!-- STUDI KASUS LENGKAP -->
+          <h3>📖 Studi Kasus — CV Maju Bersama (Januari 2024)</h3>
+          <p style="color:var(--text-secondary);margin-bottom:1.5rem">Berikut adalah rangkaian transaksi nyata sebuah perusahaan jasa konsultansi selama bulan Januari 2024. Pelajari cara menganalisis setiap transaksi dan mengubahnya menjadi jurnal yang benar.</p>
+
+          <!-- TRANSAKSI 1 -->
+          <div class="transaksi-card">
+            <div class="transaksi-header">
+              <div class="transaksi-nomor">Transaksi 1</div>
+              <div class="transaksi-tanggal">📅 1 Januari 2024</div>
+            </div>
+            <div class="transaksi-soal">
+              <span class="soal-label">📋 Soal Cerita</span>
+              <p>Budi mendirikan CV Maju Bersama, sebuah perusahaan jasa konsultansi bisnis. Sebagai modal awal, Budi menyetorkan uang tunai dari tabungan pribadinya sebesar <strong>Rp 50.000.000</strong> ke rekening perusahaan.</p>
+            </div>
+            <div class="transaksi-analisis">
+              <span class="soal-label">🔍 Analisis Transaksi</span>
+              <div class="analisis-grid">
+                <div class="analisis-item">
+                  <div class="analisis-akun">Kas di Tangan (Aset)</div>
+                  <div class="analisis-efek efek-naik">↑ Bertambah Rp 50.000.000</div>
+                  <div class="analisis-posisi posisi-debit">→ Catat di DEBIT</div>
+                </div>
+                <div class="analisis-separator">⇄</div>
+                <div class="analisis-item">
+                  <div class="analisis-akun">Modal Pemilik (Ekuitas)</div>
+                  <div class="analisis-efek efek-naik">↑ Bertambah Rp 50.000.000</div>
+                  <div class="analisis-posisi posisi-kredit">→ Catat di KREDIT</div>
+                </div>
+              </div>
+            </div>
+            <div class="transaksi-jurnal">
+              <span class="soal-label">✅ Jurnal yang Benar</span>
+              <table class="coa-table">
+                <thead><tr><th>Tanggal</th><th>Keterangan / Akun</th><th>Ref</th><th>Debit (Rp)</th><th>Kredit (Rp)</th></tr></thead>
+                <tbody>
+                  <tr><td>1 Jan 2024</td><td style="font-weight:600;color:var(--navy)">Kas di Tangan</td><td>1101</td><td>50.000.000</td><td>-</td></tr>
+                  <tr><td></td><td style="padding-left:2rem;color:#9d174d">Modal Pemilik</td><td>3101</td><td>-</td><td>50.000.000</td></tr>
+                  <tr><td></td><td colspan="4" style="font-style:italic;color:#64748b;font-size:0.8rem">Setoran modal awal pemilik tunai</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="info-box tip" style="margin-top:0.75rem">
+              <div class="info-box-icon">💡</div>
+              <div class="info-box-content">Kas adalah <strong>Aset</strong> → saldo normal Debit → saat bertambah dicatat Debit. Modal adalah <strong>Ekuitas</strong> → saldo normal Kredit → saat bertambah dicatat Kredit.</div>
+            </div>
+          </div>
+
+          <!-- TRANSAKSI 2 -->
+          <div class="transaksi-card">
+            <div class="transaksi-header">
+              <div class="transaksi-nomor">Transaksi 2</div>
+              <div class="transaksi-tanggal">📅 5 Januari 2024</div>
+            </div>
+            <div class="transaksi-soal">
+              <span class="soal-label">📋 Soal Cerita</span>
+              <p>CV Maju Bersama membeli perlengkapan kantor (kertas, pulpen, tinta printer, dll) di toko ATK seharga <strong>Rp 3.500.000</strong> dan dibayar tunai. Perlengkapan ini belum digunakan sama sekali.</p>
+            </div>
+            <div class="transaksi-analisis">
+              <span class="soal-label">🔍 Analisis Transaksi</span>
+              <div class="analisis-grid">
+                <div class="analisis-item">
+                  <div class="analisis-akun">Perlengkapan Kantor (Aset)</div>
+                  <div class="analisis-efek efek-naik">↑ Bertambah Rp 3.500.000</div>
+                  <div class="analisis-posisi posisi-debit">→ Catat di DEBIT</div>
+                </div>
+                <div class="analisis-separator">⇄</div>
+                <div class="analisis-item">
+                  <div class="analisis-akun">Kas di Tangan (Aset)</div>
+                  <div class="analisis-efek efek-turun">↓ Berkurang Rp 3.500.000</div>
+                  <div class="analisis-posisi posisi-kredit">→ Catat di KREDIT</div>
+                </div>
+              </div>
+            </div>
+            <div class="transaksi-jurnal">
+              <span class="soal-label">✅ Jurnal yang Benar</span>
+              <table class="coa-table">
+                <thead><tr><th>Tanggal</th><th>Keterangan / Akun</th><th>Ref</th><th>Debit (Rp)</th><th>Kredit (Rp)</th></tr></thead>
+                <tbody>
+                  <tr><td>5 Jan 2024</td><td style="font-weight:600;color:var(--navy)">Perlengkapan Kantor</td><td>1105</td><td>3.500.000</td><td>-</td></tr>
+                  <tr><td></td><td style="padding-left:2rem;color:#9d174d">Kas di Tangan</td><td>1101</td><td>-</td><td>3.500.000</td></tr>
+                  <tr><td></td><td colspan="4" style="font-style:italic;color:#64748b;font-size:0.8rem">Pembelian perlengkapan kantor secara tunai</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="info-box warning" style="margin-top:0.75rem">
+              <div class="info-box-icon">⚠️</div>
+              <div class="info-box-content"><strong>Jangan keliru!</strong> Perlengkapan yang <em>baru dibeli dan belum dipakai</em> dicatat sebagai <strong>Aset (Perlengkapan Kantor)</strong>, bukan Beban Perlengkapan. Baru menjadi beban saat sudah digunakan.</div>
+            </div>
+          </div>
+
+          <!-- TRANSAKSI 3 -->
+          <div class="transaksi-card">
+            <div class="transaksi-header">
+              <div class="transaksi-nomor">Transaksi 3</div>
+              <div class="transaksi-tanggal">📅 10 Januari 2024</div>
+            </div>
+            <div class="transaksi-soal">
+              <span class="soal-label">📋 Soal Cerita</span>
+              <p>CV Maju Bersama menyelesaikan pekerjaan konsultansi untuk PT Sejahtera dan menerima pembayaran tunai sebesar <strong>Rp 15.000.000</strong>.</p>
+            </div>
+            <div class="transaksi-analisis">
+              <span class="soal-label">🔍 Analisis Transaksi</span>
+              <div class="analisis-grid">
+                <div class="analisis-item">
+                  <div class="analisis-akun">Kas di Tangan (Aset)</div>
+                  <div class="analisis-efek efek-naik">↑ Bertambah Rp 15.000.000</div>
+                  <div class="analisis-posisi posisi-debit">→ Catat di DEBIT</div>
+                </div>
+                <div class="analisis-separator">⇄</div>
+                <div class="analisis-item">
+                  <div class="analisis-akun">Pendapatan Jasa (Pendapatan)</div>
+                  <div class="analisis-efek efek-naik">↑ Bertambah Rp 15.000.000</div>
+                  <div class="analisis-posisi posisi-kredit">→ Catat di KREDIT</div>
+                </div>
+              </div>
+            </div>
+            <div class="transaksi-jurnal">
+              <span class="soal-label">✅ Jurnal yang Benar</span>
+              <table class="coa-table">
+                <thead><tr><th>Tanggal</th><th>Keterangan / Akun</th><th>Ref</th><th>Debit (Rp)</th><th>Kredit (Rp)</th></tr></thead>
+                <tbody>
+                  <tr><td>10 Jan 2024</td><td style="font-weight:600;color:var(--navy)">Kas di Tangan</td><td>1101</td><td>15.000.000</td><td>-</td></tr>
+                  <tr><td></td><td style="padding-left:2rem;color:#9d174d">Pendapatan Jasa</td><td>4101</td><td>-</td><td>15.000.000</td></tr>
+                  <tr><td></td><td colspan="4" style="font-style:italic;color:#64748b;font-size:0.8rem">Penerimaan pendapatan jasa konsultansi tunai</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- TRANSAKSI 4 -->
+          <div class="transaksi-card">
+            <div class="transaksi-header">
+              <div class="transaksi-nomor">Transaksi 4</div>
+              <div class="transaksi-tanggal">📅 15 Januari 2024</div>
+            </div>
+            <div class="transaksi-soal">
+              <span class="soal-label">📋 Soal Cerita</span>
+              <p>CV Maju Bersama membayar gaji karyawan untuk bulan Januari sebesar <strong>Rp 8.000.000</strong> secara tunai.</p>
+            </div>
+            <div class="transaksi-analisis">
+              <span class="soal-label">🔍 Analisis Transaksi</span>
+              <div class="analisis-grid">
+                <div class="analisis-item">
+                  <div class="analisis-akun">Beban Gaji (Beban)</div>
+                  <div class="analisis-efek efek-naik">↑ Bertambah Rp 8.000.000</div>
+                  <div class="analisis-posisi posisi-debit">→ Catat di DEBIT</div>
+                </div>
+                <div class="analisis-separator">⇄</div>
+                <div class="analisis-item">
+                  <div class="analisis-akun">Kas di Tangan (Aset)</div>
+                  <div class="analisis-efek efek-turun">↓ Berkurang Rp 8.000.000</div>
+                  <div class="analisis-posisi posisi-kredit">→ Catat di KREDIT</div>
+                </div>
+              </div>
+            </div>
+            <div class="transaksi-jurnal">
+              <span class="soal-label">✅ Jurnal yang Benar</span>
+              <table class="coa-table">
+                <thead><tr><th>Tanggal</th><th>Keterangan / Akun</th><th>Ref</th><th>Debit (Rp)</th><th>Kredit (Rp)</th></tr></thead>
+                <tbody>
+                  <tr><td>15 Jan 2024</td><td style="font-weight:600;color:var(--navy)">Beban Gaji</td><td>5101</td><td>8.000.000</td><td>-</td></tr>
+                  <tr><td></td><td style="padding-left:2rem;color:#9d174d">Kas di Tangan</td><td>1101</td><td>-</td><td>8.000.000</td></tr>
+                  <tr><td></td><td colspan="4" style="font-style:italic;color:#64748b;font-size:0.8rem">Pembayaran gaji karyawan bulan Januari 2024</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- TRANSAKSI 5 — 3 AKUN -->
+          <div class="transaksi-card">
+            <div class="transaksi-header">
+              <div class="transaksi-nomor">Transaksi 5 ⭐ Lebih Kompleks</div>
+              <div class="transaksi-tanggal">📅 25 Januari 2024</div>
+            </div>
+            <div class="transaksi-soal">
+              <span class="soal-label">📋 Soal Cerita</span>
+              <p>CV Maju Bersama membeli komputer untuk operasional kantor seharga <strong>Rp 12.000.000</strong>. Dibayar tunai <strong>Rp 5.000.000</strong> dan sisanya <strong>Rp 7.000.000</strong> akan dibayar bulan depan (kredit/utang).</p>
+            </div>
+            <div class="transaksi-analisis">
+              <span class="soal-label">🔍 Analisis Transaksi — 3 Akun Terlibat</span>
+              <div class="analisis-grid analisis-3col">
+                <div class="analisis-item">
+                  <div class="analisis-akun">Peralatan Kantor (Aset)</div>
+                  <div class="analisis-efek efek-naik">↑ Bertambah Rp 12.000.000</div>
+                  <div class="analisis-posisi posisi-debit">→ Catat di DEBIT</div>
+                </div>
+                <div class="analisis-separator">⇄</div>
+                <div class="analisis-item">
+                  <div class="analisis-akun">Kas di Tangan (Aset)</div>
+                  <div class="analisis-efek efek-turun">↓ Berkurang Rp 5.000.000</div>
+                  <div class="analisis-posisi posisi-kredit">→ Catat di KREDIT</div>
+                </div>
+                <div class="analisis-separator">+</div>
+                <div class="analisis-item">
+                  <div class="analisis-akun">Utang Usaha (Kewajiban)</div>
+                  <div class="analisis-efek efek-naik">↑ Bertambah Rp 7.000.000</div>
+                  <div class="analisis-posisi posisi-kredit">→ Catat di KREDIT</div>
+                </div>
+              </div>
+            </div>
+            <div class="transaksi-jurnal">
+              <span class="soal-label">✅ Jurnal yang Benar</span>
+              <table class="coa-table">
+                <thead><tr><th>Tanggal</th><th>Keterangan / Akun</th><th>Ref</th><th>Debit (Rp)</th><th>Kredit (Rp)</th></tr></thead>
+                <tbody>
+                  <tr><td>25 Jan 2024</td><td style="font-weight:600;color:var(--navy)">Peralatan Kantor</td><td>1201</td><td>12.000.000</td><td>-</td></tr>
+                  <tr><td></td><td style="padding-left:2rem;color:#9d174d">Kas di Tangan</td><td>1101</td><td>-</td><td>5.000.000</td></tr>
+                  <tr><td></td><td style="padding-left:2rem;color:#9d174d">Utang Usaha</td><td>2101</td><td>-</td><td>7.000.000</td></tr>
+                  <tr><td></td><td colspan="4" style="font-style:italic;color:#64748b;font-size:0.8rem">Pembelian komputer, tunai Rp 5 jt + kredit Rp 7 jt</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="info-box tip" style="margin-top:0.75rem">
+              <div class="info-box-icon">💡</div>
+              <div class="info-box-content">Satu transaksi bisa melibatkan <strong>lebih dari 2 akun</strong>. Yang penting: <strong>Total Debit (Rp 12 jt) = Total Kredit (Rp 5 jt + Rp 7 jt = Rp 12 jt)</strong> ✅</div>
+            </div>
+          </div>
+
+          <!-- REKAPITULASI -->
+          <h3>📊 Rekapitulasi Jurnal Umum — Januari 2024</h3>
+          <p style="color:var(--text-secondary);margin-bottom:1rem">Berikut tampilan lengkap semua transaksi di atas dalam format buku jurnal umum:</p>
           <table class="coa-table">
             <thead><tr><th>Tanggal</th><th>Keterangan / Akun</th><th>Ref</th><th>Debit (Rp)</th><th>Kredit (Rp)</th></tr></thead>
             <tbody>
-              <tr><td>1 Jan</td><td>Kas di Tangan</td><td>1101</td><td>50.000.000</td><td>-</td></tr>
+              <tr><td>1 Jan</td><td style="font-weight:600;color:var(--navy)">Kas di Tangan</td><td>1101</td><td>50.000.000</td><td>-</td></tr>
               <tr><td></td><td style="padding-left:2rem;color:#9d174d">Modal Pemilik</td><td>3101</td><td>-</td><td>50.000.000</td></tr>
-              <tr><td></td><td colspan="4" style="font-style:italic;color:#64748b;font-size:0.8rem">Setoran modal awal pemilik</td></tr>
-              <tr class="group-header"><td colspan="5"></td></tr>
-              <tr><td>5 Jan</td><td>Perlengkapan Kantor</td><td>1105</td><td>3.500.000</td><td>-</td></tr>
+              <tr><td></td><td colspan="4" style="font-style:italic;color:#94a3b8;font-size:0.8rem">Setoran modal awal pemilik</td></tr>
+              <tr style="background:#f8fafc"><td colspan="5" style="height:6px"></td></tr>
+              <tr><td>5 Jan</td><td style="font-weight:600;color:var(--navy)">Perlengkapan Kantor</td><td>1105</td><td>3.500.000</td><td>-</td></tr>
               <tr><td></td><td style="padding-left:2rem;color:#9d174d">Kas di Tangan</td><td>1101</td><td>-</td><td>3.500.000</td></tr>
-              <tr><td></td><td colspan="4" style="font-style:italic;color:#64748b;font-size:0.8rem">Pembelian perlengkapan kantor tunai</td></tr>
+              <tr><td></td><td colspan="4" style="font-style:italic;color:#94a3b8;font-size:0.8rem">Pembelian perlengkapan kantor tunai</td></tr>
+              <tr style="background:#f8fafc"><td colspan="5" style="height:6px"></td></tr>
+              <tr><td>10 Jan</td><td style="font-weight:600;color:var(--navy)">Kas di Tangan</td><td>1101</td><td>15.000.000</td><td>-</td></tr>
+              <tr><td></td><td style="padding-left:2rem;color:#9d174d">Pendapatan Jasa</td><td>4101</td><td>-</td><td>15.000.000</td></tr>
+              <tr><td></td><td colspan="4" style="font-style:italic;color:#94a3b8;font-size:0.8rem">Penerimaan pendapatan jasa konsultansi</td></tr>
+              <tr style="background:#f8fafc"><td colspan="5" style="height:6px"></td></tr>
+              <tr><td>15 Jan</td><td style="font-weight:600;color:var(--navy)">Beban Gaji</td><td>5101</td><td>8.000.000</td><td>-</td></tr>
+              <tr><td></td><td style="padding-left:2rem;color:#9d174d">Kas di Tangan</td><td>1101</td><td>-</td><td>8.000.000</td></tr>
+              <tr><td></td><td colspan="4" style="font-style:italic;color:#94a3b8;font-size:0.8rem">Pembayaran gaji karyawan Januari</td></tr>
+              <tr style="background:#f8fafc"><td colspan="5" style="height:6px"></td></tr>
+              <tr><td>25 Jan</td><td style="font-weight:600;color:var(--navy)">Peralatan Kantor</td><td>1201</td><td>12.000.000</td><td>-</td></tr>
+              <tr><td></td><td style="padding-left:2rem;color:#9d174d">Kas di Tangan</td><td>1101</td><td>-</td><td>5.000.000</td></tr>
+              <tr><td></td><td style="padding-left:2rem;color:#9d174d">Utang Usaha</td><td>2101</td><td>-</td><td>7.000.000</td></tr>
+              <tr><td></td><td colspan="4" style="font-style:italic;color:#94a3b8;font-size:0.8rem">Pembelian komputer tunai + kredit</td></tr>
+              <tr style="background:var(--navy)">
+                <td colspan="3" style="color:white;font-weight:700;padding:10px 16px">TOTAL</td>
+                <td style="color:white;font-weight:800;padding:10px 16px">88.500.000</td>
+                <td style="color:white;font-weight:800;padding:10px 16px">88.500.000 ✅</td>
+              </tr>
             </tbody>
           </table>
-          <div class="info-box warning" style="margin-top:1rem">
-            <div class="info-box-icon">⚠️</div>
-            <div class="info-box-content"><strong>Ingat!</strong> Akun yang di-Debit ditulis lebih dulu, akun yang di-Kredit ditulis menjorok ke kanan. Total Debit HARUS sama dengan total Kredit.</div>
+
+          <div class="info-box tip" style="margin-top:1rem">
+            <div class="info-box-icon">🎯</div>
+            <div class="info-box-content"><strong>Sudah paham?</strong> Sekarang coba praktikkan sendiri di halaman <a href="latihan.html" style="color:var(--teal);font-weight:700">Latihan →</a> dengan soal-soal interaktif yang akan mengecek jawaban kamu secara otomatis!</div>
           </div>
         </section>
 

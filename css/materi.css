@@ -300,3 +300,166 @@
   .materi-sidebar { position: static; }
   .calc-grid { grid-template-columns: 1fr; }
 }
+
+/* ===== TRANSAKSI CARDS ===== */
+.transaksi-card {
+  background: var(--bg);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--border);
+  transition: box-shadow var(--transition);
+}
+
+.transaksi-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.transaksi-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.transaksi-nomor {
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--navy);
+  background: white;
+  padding: 5px 14px;
+  border-radius: 20px;
+  border: 2px solid var(--navy);
+}
+
+.transaksi-tanggal {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: white;
+  padding: 5px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+}
+
+.soal-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--text-muted);
+  margin-bottom: 0.6rem;
+}
+
+.transaksi-soal {
+  background: white;
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid var(--teal);
+}
+
+.transaksi-soal p {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.transaksi-analisis {
+  background: white;
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #f59e0b;
+}
+
+.analisis-grid {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.analisis-3col {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.analisis-item {
+  flex: 1;
+  min-width: 160px;
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1rem;
+  text-align: center;
+}
+
+.analisis-akun {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+
+.analisis-efek {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.efek-naik { color: var(--emerald); }
+.efek-turun { color: #ef4444; }
+
+.analisis-posisi {
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.posisi-debit {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.posisi-kredit {
+  background: #fce7f3;
+  color: #9d174d;
+}
+
+.analisis-separator {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.transaksi-jurnal {
+  background: white;
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.25rem;
+  border-left: 4px solid var(--emerald);
+}
+
+.transaksi-jurnal .coa-table {
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .analisis-grid, .analisis-3col {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .analisis-separator { text-align: center; }
+  .transaksi-header { flex-direction: column; }
+}
