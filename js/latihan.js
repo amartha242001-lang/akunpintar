@@ -260,18 +260,26 @@ function simpanJurnal() {
   const date = document.getElementById("journal-date").value;
   const desc = document.getElementById("journal-desc").value || "Jurnal tanpa keterangan";
 
+  // Bangun entries dengan semua field yang dibutuhkan laporan
   const entries = validRows.map(r => {
-    const akun = COA.find(a => a.kode === r.akun);
+    const coaEntry = COA.find(a => a.kode === r.akun) || {};
     return {
       kode: r.akun,
-      nama: akun ? akun.nama : r.akun,
-      kategori: akun ? akun.kategori : "",
-      debit: r.debit,
-      kredit: r.kredit
+      nama: coaEntry.nama || r.akun,
+      kategori: coaEntry.kategori || "",
+      subkategori: coaEntry.subkategori || "",
+      saldo_normal: coaEntry.saldo_normal || "debit",
+      debit: r.debit || 0,
+      kredit: r.kredit || 0
     };
   });
 
-  const newState = ProgressManager.addJurnal({ tanggal: date, deskripsi: desc, entries });
+  const newState = ProgressManager.addJurnal({
+    tanggal: date,
+    deskripsi: desc,
+    entries: entries
+  });
+
   const navXp = document.getElementById("nav-xp");
   if (navXp) navXp.textContent = `${newState.xp} XP`;
 

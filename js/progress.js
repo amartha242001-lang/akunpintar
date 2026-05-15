@@ -55,13 +55,15 @@ const ProgressManager = {
     return state;
   },
 
-  addJurnal(entries) {
+  addJurnal(jurnal) {
     const state = this.get();
     state.totalJurnal++;
+    // jurnal = { tanggal, deskripsi, entries: [...] }
     state.jurnalHistory.push({
       id: Date.now(),
-      tanggal: new Date().toISOString().split("T")[0],
-      entries: entries
+      tanggal: jurnal.tanggal || new Date().toISOString().split("T")[0],
+      deskripsi: jurnal.deskripsi || "Jurnal tanpa keterangan",
+      entries: jurnal.entries || []
     });
     this.save(state);
     this.checkBadges(state);

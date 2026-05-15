@@ -104,35 +104,38 @@ function renderJurnalUmum(journals) {
 
 // ===== BUILD LEDGER =====
 function buildLedger(journals) {
-  const ledger = {}; // { kode: { nama, kategori, subkategori, saldo_normal, debit_total, kredit_total } }
+  const ledger = {};
 
   journals.forEach(j => {
+    if (!j.entries || !Array.isArray(j.entries)) return;
     j.entries.forEach(e => {
+      if (!e.kode) return;
+      // Selalu lookup COA untuk data yang lengkap
+      const coaEntry = COA.find(a => a.kode === e.kode) || {};
       if (!ledger[e.kode]) {
-        const coaEntry = COA.find(a => a.kode === e.kode) || {};
         ledger[e.kode] = {
           kode: e.kode,
-          nama: e.nama,
-          kategori: e.kategori || coaEntry.kategori || "",
-          subkategori: coaEntry.subkategori || "",
-          saldo_normal: coaEntry.saldo_normal || "debit",
+          nama: coaEntry.nama || e.nama || e.kode,
+          kategori: coaEntry.kategori || e.kategori || "",
+          subkategori: coaEntry.subkategori || e.subkategori || "",
+          saldo_normal: coaEntry.saldo_normal || e.saldo_normal || "debit",
           debit_total: 0,
           kredit_total: 0,
           transactions: []
         };
       }
-      ledger[e.kode].debit_total += e.debit || 0;
-      ledger[e.kode].kredit_total += e.kredit || 0;
+      ledger[e.kode].debit_total += Number(e.debit) || 0;
+      ledger[e.kode].kredit_total += Number(e.kredit) || 0;
       ledger[e.kode].transactions.push({
         tanggal: j.tanggal,
-        deskripsi: j.deskripsi,
-        debit: e.debit || 0,
-        kredit: e.kredit || 0
+        deskripsi: j.deskripsi || "",
+        debit: Number(e.debit) || 0,
+        kredit: Number(e.kredit) || 0
       });
     });
   });
 
-  // Calculate saldo
+  // Hitung saldo akhir tiap akun
   Object.values(ledger).forEach(akun => {
     if (akun.saldo_normal === "debit") {
       akun.saldo = akun.debit_total - akun.kredit_total;
