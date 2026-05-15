@@ -1,0 +1,302 @@
+/* ===== MATERI PAGE ===== */
+.materi-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+/* Sidebar */
+.materi-sidebar {
+  position: sticky;
+  top: 80px;
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+}
+
+.sidebar-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.sidebar-nav { display: flex; flex-direction: column; gap: 2px; }
+
+.sidebar-section {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--text-muted);
+  padding: 12px 10px 4px;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: all var(--transition);
+}
+
+.sidebar-link:hover, .sidebar-link.active {
+  background: var(--navy);
+  color: white;
+}
+
+/* Content Area */
+.materi-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.content-section {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+}
+
+.content-section h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.content-section .section-desc {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.content-section p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.content-section h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 1.5rem 0 0.75rem;
+}
+
+/* ===== BALANCE ANIMATION ===== */
+.balance-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+  border-radius: var(--radius-md);
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+}
+
+.balance-side {
+  text-align: center;
+  flex: 1;
+  min-width: 140px;
+}
+
+.balance-box {
+  background: white;
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 0.75rem;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.balance-box.aktiva { border-color: var(--teal); }
+.balance-box.pasiva { border-color: var(--emerald); }
+
+.balance-amount {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--navy);
+}
+
+.balance-label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.balance-equals {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--navy);
+}
+
+.balance-status {
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.balance-status.balanced { background: #d1fae5; color: #065f46; }
+.balance-status.unbalanced { background: #fee2e2; color: #991b1b; }
+
+/* ===== COA TABLE ===== */
+.coa-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.coa-table th {
+  background: var(--navy);
+  color: white;
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.coa-table th:first-child { border-radius: 8px 0 0 8px; }
+.coa-table th:last-child { border-radius: 0 8px 8px 0; }
+
+.coa-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-secondary);
+}
+
+.coa-table tr:hover td { background: var(--bg); }
+
+.coa-table tr:last-child td { border-bottom: none; }
+
+.debit-badge, .kredit-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.debit-badge { background: #dbeafe; color: #1e40af; }
+.kredit-badge { background: #fce7f3; color: #9d174d; }
+
+/* ===== INFO BOXES ===== */
+.info-box {
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-sm);
+  margin: 1rem 0;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.info-box.tip { background: #f0fdf4; border-left: 4px solid var(--emerald); }
+.info-box.warning { background: #fffbeb; border-left: 4px solid #f59e0b; }
+.info-box.info { background: #eff6ff; border-left: 4px solid #3b82f6; }
+.info-box.danger { background: #fef2f2; border-left: 4px solid #ef4444; }
+
+.info-box-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; }
+
+.info-box-content { font-size: 0.875rem; color: var(--text-secondary); line-height: 1.7; }
+
+.info-box-content strong { color: var(--text-primary); }
+
+/* ===== TAX CALCULATOR ===== */
+.tax-calculator {
+  background: var(--bg);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.tax-calculator h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 1rem;
+}
+
+.calc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.calc-field label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.calc-field input, .calc-field select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-family: var(--font);
+  color: var(--text-primary);
+  background: white;
+  transition: border-color var(--transition);
+}
+
+.calc-field input:focus, .calc-field select:focus {
+  outline: none;
+  border-color: var(--teal);
+}
+
+.calc-result {
+  background: white;
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  border: 2px solid var(--teal);
+}
+
+.calc-result-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  font-size: 0.875rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.calc-result-row:last-child { border-bottom: none; font-weight: 700; color: var(--navy); }
+
+.calc-result-label { color: var(--text-secondary); }
+.calc-result-value { font-weight: 600; color: var(--navy); }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .materi-layout { grid-template-columns: 1fr; }
+  .materi-sidebar { position: static; }
+  .calc-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,283 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Materi — AkunPintar</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/materi.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand">
+      <div class="brand-icon">📊</div>
+      <span class="brand-name">AkunPintar</span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Dashboard</a>
+      <a href="materi.html" class="nav-link active">Materi</a>
+      <a href="latihan.html" class="nav-link">Latihan</a>
+      <a href="laporan.html" class="nav-link">Laporan</a>
+    </div>
+    <div class="nav-user">
+      <div class="user-xp"><span class="xp-icon">⚡</span><span id="nav-xp">0 XP</span></div>
+      <div class="user-avatar">👤</div>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <div class="section-header" style="margin-bottom:1.5rem">
+      <div>
+        <h1 class="section-title">📚 Materi Pembelajaran</h1>
+        <p class="section-subtitle">Akuntansi, Perpajakan, dan Keuangan — dari dasar hingga mahir</p>
+      </div>
+      <a href="latihan.html" class="btn btn-navy">Mulai Latihan →</a>
+    </div>
+
+    <div class="materi-layout">
+      <!-- Sidebar -->
+      <aside class="materi-sidebar">
+        <div class="sidebar-title">Daftar Isi</div>
+        <nav class="sidebar-nav">
+          <div class="sidebar-section">Akuntansi</div>
+          <a href="#persamaan" class="sidebar-link active">⚖️ Persamaan Dasar</a>
+          <a href="#coa" class="sidebar-link">📋 Chart of Accounts</a>
+          <a href="#jurnal" class="sidebar-link">📝 Jurnal Umum</a>
+          <a href="#buku-besar" class="sidebar-link">📖 Buku Besar</a>
+          <div class="sidebar-section">Perpajakan</div>
+          <a href="#pph21" class="sidebar-link">👤 PPh Pasal 21</a>
+          <a href="#ppn" class="sidebar-link">🧾 PPN</a>
+          <a href="#pph23" class="sidebar-link">🏢 PPh Pasal 23</a>
+          <div class="sidebar-section">Keuangan</div>
+          <a href="#laporan-keuangan" class="sidebar-link">📊 Laporan Keuangan</a>
+          <a href="#rasio" class="sidebar-link">�� Rasio Keuangan</a>
+        </nav>
+      </aside>
+
+      <!-- Content -->
+      <div class="materi-content">
+
+        <!-- PERSAMAAN DASAR -->
+        <section class="content-section" id="persamaan">
+          <h2>⚖️ Persamaan Dasar Akuntansi</h2>
+          <p class="section-desc">Fondasi dari seluruh ilmu akuntansi modern</p>
+          <p>Persamaan dasar akuntansi adalah prinsip fundamental yang menyatakan bahwa semua sumber daya yang dimiliki perusahaan (Aset) selalu dibiayai oleh dua sumber: pihak luar (Kewajiban) dan pemilik sendiri (Ekuitas).</p>
+          <div class="balance-visual">
+            <div class="balance-side">
+              <div class="balance-box aktiva">
+                <div class="balance-amount" id="aktiva-amount">Rp 50.000.000</div>
+                <div class="balance-label">AKTIVA (Aset)</div>
+              </div>
+            </div>
+            <div class="balance-equals">=</div>
+            <div class="balance-side">
+              <div class="balance-box pasiva">
+                <div class="balance-amount" id="pasiva-amount">Rp 50.000.000</div>
+                <div class="balance-label">PASIVA (Hutang + Modal)</div>
+              </div>
+            </div>
+          </div>
+          <div class="info-box tip">
+            <div class="info-box-icon">💡</div>
+            <div class="info-box-content"><strong>Rumus:</strong> Aset = Kewajiban + Ekuitas. Persamaan ini HARUS selalu seimbang setelah setiap transaksi dicatat.</div>
+          </div>
+          <h3>Komponen Utama</h3>
+          <table class="coa-table">
+            <thead><tr><th>Komponen</th><th>Definisi</th><th>Contoh</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Aset</strong></td><td>Sumber daya yang dimiliki perusahaan</td><td>Kas, Piutang, Gedung, Kendaraan</td></tr>
+              <tr><td><strong>Kewajiban</strong></td><td>Utang kepada pihak luar</td><td>Utang Bank, Utang Usaha, Utang Gaji</td></tr>
+              <tr><td><strong>Ekuitas</strong></td><td>Hak pemilik atas aset perusahaan</td><td>Modal, Laba Ditahan, Prive</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- COA -->
+        <section class="content-section" id="coa">
+          <h2>📋 Chart of Accounts & Saldo Normal</h2>
+          <p class="section-desc">Daftar akun dan aturan pencatatan Debit/Kredit</p>
+          <p>Setiap akun memiliki <strong>saldo normal</strong> — posisi di mana akun tersebut bertambah. Memahami ini adalah kunci untuk membuat jurnal yang benar.</p>
+          <div class="info-box info">
+            <div class="info-box-icon">ℹ️</div>
+            <div class="info-box-content"><strong>Aturan Debit/Kredit:</strong> Debit selalu di sisi KIRI, Kredit selalu di sisi KANAN. Akun bertambah di sisi saldo normalnya, berkurang di sisi sebaliknya.</div>
+          </div>
+          <table class="coa-table" style="margin-top:1rem">
+            <thead><tr><th>Kategori</th><th>Saldo Normal</th><th>Bertambah</th><th>Berkurang</th><th>Contoh Akun</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Aset</strong></td><td><span class="debit-badge">Debit</span></td><td>Debit ↑</td><td>Kredit ↓</td><td>Kas, Piutang, Peralatan</td></tr>
+              <tr><td><strong>Kewajiban</strong></td><td><span class="kredit-badge">Kredit</span></td><td>Kredit ↑</td><td>Debit ↓</td><td>Utang Usaha, Utang Bank</td></tr>
+              <tr><td><strong>Ekuitas</strong></td><td><span class="kredit-badge">Kredit</span></td><td>Kredit ↑</td><td>Debit ↓</td><td>Modal, Laba Ditahan</td></tr>
+              <tr><td><strong>Pendapatan</strong></td><td><span class="kredit-badge">Kredit</span></td><td>Kredit ↑</td><td>Debit ↓</td><td>Pendapatan Jasa, Penjualan</td></tr>
+              <tr><td><strong>Beban</strong></td><td><span class="debit-badge">Debit</span></td><td>Debit ↑</td><td>Kredit ↓</td><td>Beban Gaji, Beban Sewa</td></tr>
+            </tbody>
+          </table>
+          <div class="info-box tip" style="margin-top:1rem">
+            <div class="info-box-icon">🧠</div>
+            <div class="info-box-content"><strong>Cara Mudah Ingat (DEAD CLIC):</strong> <strong>D</strong>ebit = <strong>E</strong>kuitas turun, <strong>A</strong>set naik, <strong>D</strong>ividend naik. <strong>C</strong>redit = <strong>L</strong>iability naik, <strong>I</strong>ncome naik, <strong>C</strong>apital naik.</div>
+          </div>
+        </section>
+
+        <!-- JURNAL -->
+        <section class="content-section" id="jurnal">
+          <h2>📝 Jurnal Umum</h2>
+          <p class="section-desc">Pencatatan transaksi keuangan secara kronologis</p>
+          <p>Jurnal umum adalah buku catatan pertama (book of original entry) tempat semua transaksi keuangan dicatat secara kronologis. Setiap transaksi harus memiliki total Debit = total Kredit.</p>
+          <h3>Format Jurnal Umum</h3>
+          <table class="coa-table">
+            <thead><tr><th>Tanggal</th><th>Keterangan / Akun</th><th>Ref</th><th>Debit (Rp)</th><th>Kredit (Rp)</th></tr></thead>
+            <tbody>
+              <tr><td>1 Jan</td><td>Kas di Tangan</td><td>1101</td><td>50.000.000</td><td>-</td></tr>
+              <tr><td></td><td style="padding-left:2rem;color:#9d174d">Modal Pemilik</td><td>3101</td><td>-</td><td>50.000.000</td></tr>
+              <tr><td></td><td colspan="4" style="font-style:italic;color:#64748b;font-size:0.8rem">Setoran modal awal pemilik</td></tr>
+              <tr class="group-header"><td colspan="5"></td></tr>
+              <tr><td>5 Jan</td><td>Perlengkapan Kantor</td><td>1105</td><td>3.500.000</td><td>-</td></tr>
+              <tr><td></td><td style="padding-left:2rem;color:#9d174d">Kas di Tangan</td><td>1101</td><td>-</td><td>3.500.000</td></tr>
+              <tr><td></td><td colspan="4" style="font-style:italic;color:#64748b;font-size:0.8rem">Pembelian perlengkapan kantor tunai</td></tr>
+            </tbody>
+          </table>
+          <div class="info-box warning" style="margin-top:1rem">
+            <div class="info-box-icon">⚠️</div>
+            <div class="info-box-content"><strong>Ingat!</strong> Akun yang di-Debit ditulis lebih dulu, akun yang di-Kredit ditulis menjorok ke kanan. Total Debit HARUS sama dengan total Kredit.</div>
+          </div>
+        </section>
+
+        <!-- BUKU BESAR -->
+        <section class="content-section" id="buku-besar">
+          <h2>📖 Buku Besar</h2>
+          <p class="section-desc">Posting dari jurnal ke akun-akun individual</p>
+          <p>Buku Besar (Ledger) adalah kumpulan akun-akun yang menampung semua transaksi yang sudah dicatat di jurnal. Setiap akun memiliki halaman tersendiri di buku besar.</p>
+          <div class="info-box info">
+            <div class="info-box-icon">📌</div>
+            <div class="info-box-content">Proses memindahkan catatan dari jurnal ke buku besar disebut <strong>Posting</strong>. Lihat halaman <a href="laporan.html" style="color:var(--teal)">Laporan</a> untuk melihat buku besar dari jurnal yang kamu buat di simulator.</div>
+          </div>
+        </section>
+
+        <!-- PPH 21 -->
+        <section class="content-section" id="pph21">
+          <h2>👤 PPh Pasal 21 — Pajak Penghasilan Karyawan</h2>
+          <p class="section-desc">Pajak atas penghasilan orang pribadi dari pekerjaan</p>
+          <p>PPh Pasal 21 adalah pajak yang dipotong oleh pemberi kerja atas penghasilan yang diterima karyawan. Perusahaan bertindak sebagai <strong>pemotong pajak</strong> (withholding agent).</p>
+          <h3>Tarif PPh 21 (Pasal 17 UU PPh)</h3>
+          <table class="coa-table">
+            <thead><tr><th>Penghasilan Kena Pajak (PKP) per Tahun</th><th>Tarif</th></tr></thead>
+            <tbody>
+              <tr><td>Sampai dengan Rp 60.000.000</td><td><strong>5%</strong></td></tr>
+              <tr><td>Rp 60.000.001 — Rp 250.000.000</td><td><strong>15%</strong></td></tr>
+              <tr><td>Rp 250.000.001 — Rp 500.000.000</td><td><strong>25%</strong></td></tr>
+              <tr><td>Rp 500.000.001 — Rp 5.000.000.000</td><td><strong>30%</strong></td></tr>
+              <tr><td>Di atas Rp 5.000.000.000</td><td><strong>35%</strong></td></tr>
+            </tbody>
+          </table>
+          <div class="tax-calculator">
+            <h4>🧮 Kalkulator PPh 21 Sederhana</h4>
+            <div class="calc-grid">
+              <div class="calc-field">
+                <label>Gaji Bruto per Bulan (Rp)</label>
+                <input type="number" id="gaji-bruto" placeholder="10000000" oninput="hitungPPh21()" />
+              </div>
+              <div class="calc-field">
+                <label>Status PTKP</label>
+                <select id="status-ptkp" onchange="hitungPPh21()">
+                  <option value="54000000">TK/0 — Tidak Kawin, 0 tanggungan (Rp 54 jt/th)</option>
+                  <option value="58500000">K/0 — Kawin, 0 tanggungan (Rp 58,5 jt/th)</option>
+                  <option value="63000000">K/1 — Kawin, 1 tanggungan (Rp 63 jt/th)</option>
+                  <option value="67500000">K/2 — Kawin, 2 tanggungan (Rp 67,5 jt/th)</option>
+                  <option value="72000000">K/3 — Kawin, 3 tanggungan (Rp 72 jt/th)</option>
+                </select>
+              </div>
+            </div>
+            <div class="calc-result" id="pph21-result">
+              <div class="calc-result-row"><span class="calc-result-label">Gaji Bruto per Tahun</span><span class="calc-result-value" id="r-bruto-tahunan">Rp 0</span></div>
+              <div class="calc-result-row"><span class="calc-result-label">Biaya Jabatan (5%, maks Rp 6 jt/th)</span><span class="calc-result-value" id="r-biaya-jabatan">Rp 0</span></div>
+              <div class="calc-result-row"><span class="calc-result-label">Penghasilan Neto per Tahun</span><span class="calc-result-value" id="r-neto">Rp 0</span></div>
+              <div class="calc-result-row"><span class="calc-result-label">PTKP</span><span class="calc-result-value" id="r-ptkp">Rp 0</span></div>
+              <div class="calc-result-row"><span class="calc-result-label">Penghasilan Kena Pajak (PKP)</span><span class="calc-result-value" id="r-pkp">Rp 0</span></div>
+              <div class="calc-result-row"><span class="calc-result-label">PPh 21 per Tahun</span><span class="calc-result-value" id="r-pph-tahunan">Rp 0</span></div>
+              <div class="calc-result-row"><span class="calc-result-label">PPh 21 per Bulan (dipotong)</span><span class="calc-result-value" id="r-pph-bulanan" style="color:var(--teal);font-size:1.1rem">Rp 0</span></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- PPN -->
+        <section class="content-section" id="ppn">
+          <h2>🧾 PPN — Pajak Pertambahan Nilai</h2>
+          <p class="section-desc">Pajak atas konsumsi barang dan jasa kena pajak</p>
+          <p>PPN adalah pajak tidak langsung yang dikenakan atas setiap penyerahan Barang Kena Pajak (BKP) atau Jasa Kena Pajak (JKP). Tarif umum PPN adalah <strong>11%</strong> (berlaku sejak April 2022).</p>
+          <h3>Mekanisme PPN</h3>
+          <table class="coa-table">
+            <thead><tr><th>Istilah</th><th>Penjelasan</th></tr></thead>
+            <tbody>
+              <tr><td><strong>PPN Keluaran</strong></td><td>PPN yang dipungut saat menjual BKP/JKP (kewajiban)</td></tr>
+              <tr><td><strong>PPN Masukan</strong></td><td>PPN yang dibayar saat membeli BKP/JKP (dapat dikreditkan)</td></tr>
+              <tr><td><strong>PKP</strong></td><td>Pengusaha Kena Pajak — wajib memungut PPN jika omzet > Rp 4,8 M/tahun</td></tr>
+              <tr><td><strong>Faktur Pajak</strong></td><td>Bukti pungutan PPN yang dibuat oleh PKP penjual</td></tr>
+            </tbody>
+          </table>
+          <div class="info-box tip" style="margin-top:1rem">
+            <div class="info-box-icon">💡</div>
+            <div class="info-box-content"><strong>Contoh:</strong> Jual barang Rp 10.000.000 → PPN Keluaran = 11% × Rp 10.000.000 = Rp 1.100.000. Total tagihan ke pembeli = Rp 11.100.000.</div>
+          </div>
+        </section>
+
+        <!-- PPH 23 -->
+        <section class="content-section" id="pph23">
+          <h2>🏢 PPh Pasal 23 — Pajak atas Jasa & Dividen</h2>
+          <p class="section-desc">Pajak yang dipotong atas penghasilan dari modal dan jasa</p>
+          <p>PPh Pasal 23 dipotong oleh pihak yang membayar atas penghasilan berupa dividen, bunga, royalti, hadiah, dan imbalan jasa tertentu.</p>
+          <table class="coa-table">
+            <thead><tr><th>Jenis Penghasilan</th><th>Tarif</th></tr></thead>
+            <tbody>
+              <tr><td>Dividen, Bunga, Royalti, Hadiah</td><td><strong>15%</strong></td></tr>
+              <tr><td>Jasa Teknik, Manajemen, Konsultan</td><td><strong>2%</strong></td></tr>
+              <tr><td>Jasa lainnya (sesuai PMK)</td><td><strong>2%</strong></td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- LAPORAN KEUANGAN -->
+        <section class="content-section" id="laporan-keuangan">
+          <h2>📊 Laporan Keuangan</h2>
+          <p class="section-desc">Ringkasan kondisi keuangan perusahaan</p>
+          <p>Laporan keuangan adalah output akhir dari siklus akuntansi. Ada 4 laporan utama yang wajib dibuat:</p>
+          <table class="coa-table">
+            <thead><tr><th>Laporan</th><th>Isi</th><th>Periode</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Laporan Laba/Rugi</strong></td><td>Pendapatan dikurangi Beban = Laba/Rugi</td><td>Satu periode (misal: Jan 2024)</td></tr>
+              <tr><td><strong>Neraca (Balance Sheet)</strong></td><td>Aset = Kewajiban + Ekuitas</td><td>Pada tanggal tertentu</td></tr>
+              <tr><td><strong>Laporan Arus Kas</strong></td><td>Aliran masuk dan keluar kas</td><td>Satu periode</td></tr>
+              <tr><td><strong>Laporan Perubahan Ekuitas</strong></td><td>Perubahan modal pemilik</td><td>Satu periode</td></tr>
+            </tbody>
+          </table>
+          <div class="info-box info" style="margin-top:1rem">
+            <div class="info-box-icon">📌</div>
+            <div class="info-box-content">Lihat halaman <a href="laporan.html" style="color:var(--teal)">Laporan</a> untuk melihat laporan keuangan yang dihasilkan dari jurnal yang kamu buat di simulator latihan.</div>
+          </div>
+        </section>
+
+        <!-- RASIO KEUANGAN -->
+        <section class="content-section" id="rasio">
+          <h2>📐 Rasio Keuangan</h2>
+          <p class="section-desc">Alat analisis untuk menilai kesehatan keuangan perusahaan</p>
+          <table class="coa-table">
+            <thead><tr><th>Rasio</th><th>Rumus</th><th>Interpretasi</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Current Ratio</strong></td><td>Aset Lancar / Kewajiban Lancar</td><td>> 2 = Likuiditas baik</td></tr>
+              <tr><td><strong>Debt to Equity</strong></td><td>Total Utang / Total Ekuitas</td><td>< 1 = Lebih banyak modal sendiri</td></tr>
+              <tr><td><strong>Net Profit Margin</strong></td><td>Laba Bersih / Pendapatan × 100%</td><td>Semakin tinggi semakin baik</td></tr>
+              <tr><td><strong>ROA</strong></td><td>Laba Bersih / Total Aset × 100%</td><td>Efisiensi penggunaan aset</td></tr>
+              <tr><td><strong>ROE</strong></td><td>Laba Bersih / Total Ekuitas × 100%</td><td>Return untuk pemilik</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <div class="toast" id="toast"></div>
+  <script src="js/data.js"></script>
+  <script src="js/progress.js"></script>
+  <script src="js/materi.js"></script>
+</body>
+</html>

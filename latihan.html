@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Latihan — AkunPintar</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/latihan.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand">
+      <div class="brand-icon">📊</div>
+      <span class="brand-name">AkunPintar</span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Dashboard</a>
+      <a href="materi.html" class="nav-link">Materi</a>
+      <a href="latihan.html" class="nav-link active">Latihan</a>
+      <a href="laporan.html" class="nav-link">Laporan</a>
+    </div>
+    <div class="nav-user">
+      <div class="user-xp"><span class="xp-icon">⚡</span><span id="nav-xp">0 XP</span></div>
+      <div class="user-avatar">��</div>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <div class="section-header" style="margin-bottom:1.5rem">
+      <div>
+        <h1 class="section-title">📝 Simulator Jurnal Interaktif</h1>
+        <p class="section-subtitle">Jawab soal studi kasus dengan membuat jurnal yang benar</p>
+      </div>
+      <a href="laporan.html" class="btn btn-navy">Lihat Laporan →</a>
+    </div>
+
+    <div class="latihan-layout">
+      <!-- SOAL PANEL -->
+      <div class="soal-panel">
+        <div class="soal-header">
+          <span class="soal-counter" id="soal-counter">Soal 1 dari 8</span>
+          <div class="soal-nav">
+            <button class="soal-nav-btn" onclick="prevSoal()" title="Soal sebelumnya">←</button>
+            <button class="soal-nav-btn" onclick="nextSoal()" title="Soal berikutnya">→</button>
+          </div>
+        </div>
+
+        <div class="soal-dots" id="soal-dots"></div>
+
+        <div id="soal-category" class="soal-category tag tag-teal">📝 Akuntansi Dasar</div>
+        <div class="soal-number" id="soal-number">Soal #1</div>
+        <div class="soal-text" id="soal-text">Loading...</div>
+        <div class="soal-hint" id="soal-hint"><strong>💡 Petunjuk:</strong> <span id="hint-text"></span></div>
+
+        <div class="soal-actions">
+          <button class="btn btn-teal" onclick="cekJawaban()" id="btn-cek">✓ Cek Jawaban</button>
+          <button class="btn btn-outline" onclick="resetJurnal()">↺ Reset</button>
+          <button class="btn btn-outline" onclick="lihatKunciJawaban()" id="btn-kunci">👁 Lihat Kunci</button>
+        </div>
+
+        <!-- Feedback -->
+        <div class="feedback-panel" id="feedback-panel">
+          <div class="feedback-header">
+            <span class="feedback-icon" id="feedback-icon">✅</span>
+            <span class="feedback-title" id="feedback-title">Benar!</span>
+          </div>
+          <p class="feedback-text" id="feedback-text"></p>
+          <div class="feedback-answer" id="feedback-answer" style="display:none">
+            <h4>Jawaban yang Benar:</h4>
+            <div id="answer-rows"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SIMULATOR PANEL -->
+      <div class="simulator-panel">
+        <div class="simulator-header">
+          <span class="simulator-title">📒 Jurnal Umum</span>
+          <div class="balance-indicator unbalanced" id="balance-indicator">
+            <span>⚠️</span> Belum Balance
+          </div>
+        </div>
+
+        <!-- Meta -->
+        <div class="journal-meta">
+          <div class="form-field">
+            <label>Tanggal</label>
+            <input type="date" id="journal-date" />
+          </div>
+          <div class="form-field">
+            <label>Keterangan / Deskripsi</label>
+            <input type="text" id="journal-desc" placeholder="Contoh: Setoran modal awal pemilik" />
+          </div>
+        </div>
+
+        <!-- Entries Header -->
+        <div class="journal-entries-header">
+          <span>Akun</span>
+          <span>Debit (Rp)</span>
+          <span>Kredit (Rp)</span>
+          <span></span>
+        </div>
+
+        <!-- Entries Body -->
+        <div class="journal-entries-body" id="journal-entries"></div>
+
+        <!-- Totals -->
+        <div class="journal-totals">
+          <span class="totals-label">TOTAL</span>
+          <span class="totals-value" id="total-debit">Rp 0</span>
+          <span class="totals-value" id="total-kredit">Rp 0</span>
+          <span></span>
+        </div>
+
+        <!-- Actions -->
+        <div class="journal-actions">
+          <button class="add-row-btn" onclick="addJournalRow()">+ Tambah Baris</button>
+          <button class="btn btn-navy" onclick="simpanJurnal()" id="btn-simpan" disabled>💾 Simpan ke Buku Besar</button>
+        </div>
+
+        <!-- Free Journal Mode -->
+        <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:2px solid var(--border)">
+          <div style="font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.8px;color:var(--text-muted);margin-bottom:0.75rem">Mode Bebas — Buat Jurnal Sendiri</div>
+          <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:1rem">Gunakan simulator di atas untuk membuat jurnal bebas (tidak terkait soal). Klik "Simpan ke Buku Besar" untuk menyimpan ke laporan.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- XP Popup -->
+  <div class="xp-popup" id="xp-popup">+0 XP ⚡</div>
+
+  <!-- Kunci Jawaban Modal -->
+  <div class="modal-overlay" id="kunci-modal">
+    <div class="modal">
+      <div class="modal-header">
+        <div class="modal-icon info">👁</div>
+        <div class="modal-title">Kunci Jawaban</div>
+      </div>
+      <div class="modal-body" id="kunci-content"></div>
+      <div class="modal-footer">
+        <button class="btn btn-navy" onclick="closeModal('kunci-modal')">Tutup</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="js/data.js"></script>
+  <script src="js/progress.js"></script>
+  <script src="js/latihan.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laporan — AkunPintar</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/laporan.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand">
+      <div class="brand-icon">📊</div>
+      <span class="brand-name">AkunPintar</span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Dashboard</a>
+      <a href="materi.html" class="nav-link">Materi</a>
+      <a href="latihan.html" class="nav-link">Latihan</a>
+      <a href="laporan.html" class="nav-link active">Laporan</a>
+    </div>
+    <div class="nav-user">
+      <div class="user-xp"><span class="xp-icon">⚡</span><span id="nav-xp">0 XP</span></div>
+      <div class="user-avatar">��</div>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <div class="section-header" style="margin-bottom:1.5rem">
+      <div>
+        <h1 class="section-title">📊 Laporan Keuangan</h1>
+        <p class="section-subtitle">Hasil posting jurnal ke laporan keuangan otomatis</p>
+      </div>
+      <div style="display:flex;gap:10px">
+        <button class="btn btn-outline" onclick="window.print()">🖨️ Cetak</button>
+        <a href="latihan.html" class="btn btn-navy">+ Tambah Jurnal</a>
+      </div>
+    </div>
+
+    <div class="laporan-layout">
+      <!-- Summary Cards -->
+      <div class="report-grid" id="summary-cards"></div>
+
+      <!-- Controls -->
+      <div class="laporan-controls">
+        <div class="laporan-tabs">
+          <button class="laporan-tab active" onclick="switchTab('jurnal-umum')">📝 Jurnal Umum</button>
+          <button class="laporan-tab" onclick="switchTab('buku-besar')">📖 Buku Besar</button>
+          <button class="laporan-tab" onclick="switchTab('neraca-saldo')">⚖️ Neraca Saldo</button>
+          <button class="laporan-tab" onclick="switchTab('laba-rugi')">📈 Laba/Rugi</button>
+          <button class="laporan-tab" onclick="switchTab('neraca')">🏦 Neraca</button>
+        </div>
+        <button class="btn btn-danger" onclick="clearJurnal()">🗑️ Hapus Semua Jurnal</button>
+      </div>
+
+      <!-- Jurnal Umum -->
+      <div class="report-section active" id="tab-jurnal-umum">
+        <div class="report-title">📝 Jurnal Umum</div>
+        <div class="report-subtitle" id="jurnal-subtitle">Semua transaksi yang telah dicatat</div>
+        <div id="jurnal-umum-content"></div>
+      </div>
+
+      <!-- Buku Besar -->
+      <div class="report-section" id="tab-buku-besar">
+        <div class="report-title">📖 Buku Besar</div>
+        <div class="report-subtitle">Posting per akun dari jurnal umum</div>
+        <div id="buku-besar-content"></div>
+      </div>
+
+      <!-- Neraca Saldo -->
+      <div class="report-section" id="tab-neraca-saldo">
+        <div class="report-title">⚖️ Neraca Saldo</div>
+        <div class="report-subtitle">Saldo akhir semua akun setelah posting</div>
+        <div id="neraca-saldo-content"></div>
+      </div>
+
+      <!-- Laba Rugi -->
+      <div class="report-section" id="tab-laba-rugi">
+        <div class="report-title">📈 Laporan Laba/Rugi</div>
+        <div class="report-subtitle" id="labarugi-subtitle">Periode: —</div>
+        <div id="laba-rugi-content"></div>
+      </div>
+
+      <!-- Neraca -->
+      <div class="report-section" id="tab-neraca">
+        <div class="report-title">🏦 Neraca (Balance Sheet)</div>
+        <div class="report-subtitle" id="neraca-subtitle">Per tanggal: —</div>
+        <div id="neraca-content"></div>
+      </div>
+    </div>
+  </main>
+
+  <div class="toast" id="toast"></div>
+  <script src="js/data.js"></script>
+  <script src="js/progress.js"></script>
+  <script src="js/laporan.js"></script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AkunPintar — Platform Belajar Akuntansi & Keuangan</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <div class="brand-icon">📊</div>
+      <span class="brand-name">AkunPintar</span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link active">Dashboard</a>
+      <a href="materi.html" class="nav-link">Materi</a>
+      <a href="latihan.html" class="nav-link">Latihan</a>
+      <a href="laporan.html" class="nav-link">Laporan</a>
+    </div>
+    <div class="nav-user">
+      <div class="user-xp">
+        <span class="xp-icon">⚡</span>
+        <span id="nav-xp">0 XP</span>
+      </div>
+      <div class="user-avatar">👤</div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Welcome Banner -->
+    <section class="welcome-banner">
+      <div class="welcome-text">
+        <h1>Selamat Datang, <span id="user-name">Pelajar</span>! 👋</h1>
+        <p>Kuasai akuntansi, pajak, dan keuangan dengan cara yang menyenangkan.</p>
+      </div>
+      <div class="welcome-stats">
+        <div class="stat-pill">
+          <span class="stat-icon">🔥</span>
+          <span id="streak-count">0</span> hari berturut-turut
+        </div>
+      </div>
+    </section>
+
+    <!-- Bento Box Dashboard -->
+    <div class="bento-grid">
+
+      <!-- Card: Lanjutkan Pembelajaran (Large) -->
+      <div class="bento-card card-large card-primary" id="continue-card">
+        <div class="card-header">
+          <span class="card-icon">🚀</span>
+          <span class="card-tag">Lanjutkan</span>
+        </div>
+        <h2 class="card-title">Siklus Akuntansi Dasar</h2>
+        <p class="card-subtitle">Modul 2: Jurnal Umum & Buku Besar</p>
+        <div class="progress-section">
+          <div class="progress-label">
+            <span>Progress</span>
+            <span id="module-progress-text">45%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" id="module-progress-bar" style="width: 45%"></div>
+          </div>
+        </div>
+        <a href="latihan.html" class="btn btn-primary">Lanjutkan Belajar →</a>
+      </div>
+
+      <!-- Card: Skor & Level -->
+      <div class="bento-card card-score">
+        <div class="card-header">
+          <span class="card-icon">⭐</span>
+          <span class="card-tag">Level Anda</span>
+        </div>
+        <div class="level-display">
+          <div class="level-badge" id="level-badge">
+            <span class="level-number" id="user-level">1</span>
+          </div>
+          <div class="level-info">
+            <div class="level-title" id="level-title">Pemula Akuntansi</div>
+            <div class="xp-display">
+              <span id="current-xp">0</span> / <span id="next-level-xp">100</span> XP
+            </div>
+          </div>
+        </div>
+        <div class="progress-bar xp-bar">
+          <div class="progress-fill xp-fill" id="xp-progress-bar" style="width: 0%"></div>
+        </div>
+      </div>
+
+      <!-- Card: Statistik -->
+      <div class="bento-card card-stats">
+        <div class="card-header">
+          <span class="card-icon">📈</span>
+          <span class="card-tag">Statistik</span>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-value" id="total-soal">0</div>
+            <div class="stat-label">Soal Dijawab</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" id="total-benar">0</div>
+            <div class="stat-label">Jawaban Benar</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" id="akurasi">0%</div>
+            <div class="stat-label">Akurasi</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" id="total-jurnal">0</div>
+            <div class="stat-label">Jurnal Dibuat</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card: Modul Akuntansi -->
+      <div class="bento-card card-module">
+        <div class="card-header">
+          <span class="card-icon">📚</span>
+          <span class="card-tag">Modul</span>
+        </div>
+        <h3 class="card-title">Akuntansi Dasar</h3>
+        <div class="module-list">
+          <a href="materi.html#persamaan" class="module-item">
+            <span class="module-icon">⚖️</span>
+            <span class="module-name">Persamaan Dasar Akuntansi</span>
+            <span class="module-status done">✓</span>
+          </a>
+          <a href="materi.html#coa" class="module-item">
+            <span class="module-icon">📋</span>
+            <span class="module-name">Chart of Accounts</span>
+            <span class="module-status done">✓</span>
+          </a>
+          <a href="materi.html#jurnal" class="module-item">
+            <span class="module-icon">📝</span>
+            <span class="module-name">Jurnal Umum</span>
+            <span class="module-status active">→</span>
+          </a>
+          <a href="materi.html#buku-besar" class="module-item">
+            <span class="module-icon">📖</span>
+            <span class="module-name">Buku Besar</span>
+            <span class="module-status locked">🔒</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card: Pajak -->
+      <div class="bento-card card-tax">
+        <div class="card-header">
+          <span class="card-icon">🏛️</span>
+          <span class="card-tag">Perpajakan</span>
+        </div>
+        <h3 class="card-title">Modul Pajak</h3>
+        <div class="module-list">
+          <a href="materi.html#pph21" class="module-item">
+            <span class="module-icon">👤</span>
+            <span class="module-name">PPh Pasal 21</span>
+            <span class="module-status active">→</span>
+          </a>
+          <a href="materi.html#ppn" class="module-item">
+            <span class="module-icon">🧾</span>
+            <span class="module-name">PPN (Pajak Pertambahan Nilai)</span>
+            <span class="module-status locked">🔒</span>
+          </a>
+          <a href="materi.html#pph23" class="module-item">
+            <span class="module-icon">🏢</span>
+            <span class="module-name">PPh Pasal 23</span>
+            <span class="module-status locked">🔒</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card: Finance -->
+      <div class="bento-card card-finance">
+        <div class="card-header">
+          <span class="card-icon">💰</span>
+          <span class="card-tag">Keuangan</span>
+        </div>
+        <h3 class="card-title">Analisis Keuangan</h3>
+        <div class="module-list">
+          <a href="materi.html#laporan-keuangan" class="module-item">
+            <span class="module-icon">📊</span>
+            <span class="module-name">Laporan Keuangan</span>
+            <span class="module-status active">→</span>
+          </a>
+          <a href="materi.html#rasio" class="module-item">
+            <span class="module-icon">📐</span>
+            <span class="module-name">Rasio Keuangan</span>
+            <span class="module-status locked">🔒</span>
+          </a>
+          <a href="materi.html#laporan-keuangan" class="module-item">
+            <span class="module-icon">💸</span>
+            <span class="module-name">Arus Kas</span>
+            <span class="module-status locked">🔒</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card: Badges -->
+      <div class="bento-card card-badges">
+        <div class="card-header">
+          <span class="card-icon">🏆</span>
+          <span class="card-tag">Pencapaian</span>
+        </div>
+        <div class="badges-grid" id="badges-container">
+          <!-- Badges rendered by JS -->
+        </div>
+      </div>
+
+      <!-- Card: Quick Action -->
+      <div class="bento-card card-quick">
+        <div class="card-header">
+          <span class="card-icon">⚡</span>
+          <span class="card-tag">Aksi Cepat</span>
+        </div>
+        <div class="quick-actions">
+          <a href="latihan.html" class="quick-btn">
+            <span>📝</span> Mulai Latihan
+          </a>
+          <a href="laporan.html" class="quick-btn">
+            <span>📊</span> Lihat Laporan
+          </a>
+          <a href="materi.html" class="quick-btn">
+            <span>📚</span> Baca Materi
+          </a>
+          <button class="quick-btn" onclick="resetProgress()">
+            <span>🔄</span> Reset Data
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/progress.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

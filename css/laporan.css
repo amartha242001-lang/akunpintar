@@ -1,0 +1,222 @@
+/* ===== LAPORAN PAGE ===== */
+.laporan-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.laporan-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.75rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.laporan-tabs {
+  display: flex;
+  gap: 6px;
+}
+
+.laporan-tab {
+  padding: 8px 18px;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--border);
+  background: white;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.laporan-tab.active {
+  background: var(--navy);
+  color: white;
+  border-color: var(--navy);
+}
+
+.laporan-tab:hover:not(.active) {
+  border-color: var(--navy);
+  color: var(--navy);
+}
+
+/* ===== REPORT CARDS ===== */
+.report-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.report-summary-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  text-align: center;
+}
+
+.report-summary-card .summary-icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.report-summary-card .summary-value {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.report-summary-card .summary-label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* ===== FINANCIAL TABLES ===== */
+.report-section {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  display: none;
+}
+
+.report-section.active { display: block; }
+
+.report-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 0.25rem;
+}
+
+.report-subtitle {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.financial-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.financial-table th {
+  background: var(--navy);
+  color: white;
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.financial-table th:first-child { border-radius: 8px 0 0 8px; }
+.financial-table th:last-child { border-radius: 0 8px 8px 0; text-align: right; }
+
+.financial-table td {
+  padding: 11px 16px;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.financial-table td:last-child { text-align: right; font-weight: 600; color: var(--navy); }
+
+.financial-table tr:hover td { background: var(--bg); }
+.financial-table tr:last-child td { border-bottom: none; }
+
+.financial-table .group-header td {
+  background: var(--bg);
+  font-weight: 700;
+  color: var(--navy);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 8px 16px;
+}
+
+.financial-table .subtotal td {
+  border-top: 2px solid var(--border);
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.financial-table .total td {
+  border-top: 3px double var(--navy);
+  font-weight: 800;
+  color: var(--navy);
+  font-size: 1rem;
+}
+
+.amount-positive { color: var(--emerald) !important; }
+.amount-negative { color: #ef4444 !important; }
+
+/* ===== NERACA SALDO ===== */
+.neraca-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.neraca-side h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--border);
+}
+
+.neraca-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 0.875rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.neraca-row:last-child { border-bottom: none; }
+
+.neraca-akun { color: var(--text-secondary); }
+.neraca-amount { font-weight: 600; color: var(--navy); }
+
+.neraca-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0 0;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--navy);
+  border-top: 3px double var(--navy);
+  margin-top: 8px;
+}
+
+/* ===== EMPTY STATE ===== */
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--text-muted);
+}
+
+.empty-state-icon { font-size: 4rem; margin-bottom: 1rem; }
+.empty-state-title { font-size: 1.2rem; font-weight: 700; color: var(--text-secondary); margin-bottom: 0.5rem; }
+.empty-state-text { font-size: 0.9rem; margin-bottom: 1.5rem; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .report-grid { grid-template-columns: 1fr; }
+  .neraca-grid { grid-template-columns: 1fr; }
+  .laporan-tabs { flex-wrap: wrap; }
+}
