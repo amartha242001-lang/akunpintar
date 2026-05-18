@@ -220,3 +220,29 @@
   .neraca-grid { grid-template-columns: 1fr; }
   .laporan-tabs { flex-wrap: wrap; }
 }
+
+/* ===== TOMBOL EXCEL ===== */
+.btn-excel {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition);
+  background: linear-gradient(135deg, #1D6F42, #217346);
+  color: white;
+  box-shadow: 0 2px 8px rgba(29,111,66,0.3);
+}
+
+.btn-excel:hover {
+  background: linear-gradient(135deg, #155232, #1a5c38);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(29,111,66,0.4);
+}
+
+.btn-excel span { font-size: 1.1rem; }

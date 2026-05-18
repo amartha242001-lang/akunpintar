@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/laporan.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- SheetJS untuk Export Excel -->
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.2/package/dist/xlsx.full.min.js"></script>
 </head>
 <body>
   <nav class="navbar">
@@ -32,8 +34,11 @@
         <h1 class="section-title">📊 Laporan Keuangan</h1>
         <p class="section-subtitle">Hasil posting jurnal ke laporan keuangan otomatis</p>
       </div>
-      <div style="display:flex;gap:10px">
-        <button class="btn btn-outline" onclick="window.print()">🖨️ Cetak</button>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <button class="btn btn-outline" onclick="window.print()">🖨️ Cetak PDF</button>
+        <button class="btn btn-excel" onclick="exportToExcel()">
+          <span>📊</span> Export Excel
+        </button>
         <a href="latihan.html" class="btn btn-navy">+ Tambah Jurnal</a>
       </div>
     </div>
@@ -95,5 +100,6 @@
   <script src="js/data.js"></script>
   <script src="js/progress.js"></script>
   <script src="js/laporan.js"></script>
+  <script src="js/export-excel.js"></script>
 </body>
 </html>

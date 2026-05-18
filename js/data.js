@@ -150,6 +150,122 @@ const soalLatihan = [
     ],
     penjelasan_error: "Pengambilan uang oleh pemilik untuk pribadi dicatat sebagai Prive Pemilik (Ekuitas) → Debit (mengurangi ekuitas). Kas (Aset) berkurang → Kredit. Ini BUKAN beban perusahaan!",
     xp: 30
+  },
+
+  // ===== SOAL 9–16 =====
+  {
+    id: 9,
+    kategori: "Akuntansi Dasar",
+    kategori_icon: "📝",
+    kategori_color: "tag-teal",
+    pertanyaan: "Tanggal 2 Februari, perusahaan membayar sewa kantor untuk 1 bulan sebesar Rp 4.500.000 secara tunai.",
+    hint: "Sewa yang sudah dibayar dan langsung digunakan = Beban Sewa, bukan Aset.",
+    jawaban_benar: [
+      { akun: "5102", posisi: "debit",  nominal: 4500000 },
+      { akun: "1101", posisi: "kredit", nominal: 4500000 }
+    ],
+    penjelasan_error: "Pembayaran sewa kantor yang langsung digunakan dicatat sebagai Beban Sewa (Beban) → Debit. Kas (Aset) berkurang → Kredit. Berbeda dengan sewa dibayar dimuka yang dicatat sebagai Aset.",
+    xp: 25
+  },
+  {
+    id: 10,
+    kategori: "Akuntansi Dasar",
+    kategori_icon: "📝",
+    kategori_color: "tag-teal",
+    pertanyaan: "Tanggal 5 Februari, perusahaan menerima uang muka dari klien PT Berkah sebesar Rp 10.000.000 untuk pekerjaan konsultansi yang akan dikerjakan bulan depan.",
+    hint: "Uang sudah diterima tapi pekerjaan BELUM dilakukan = Pendapatan Diterima Dimuka (Kewajiban)!",
+    jawaban_benar: [
+      { akun: "1101", posisi: "debit",  nominal: 10000000 },
+      { akun: "2104", posisi: "kredit", nominal: 10000000 }
+    ],
+    penjelasan_error: "Uang muka yang diterima sebelum pekerjaan selesai adalah KEWAJIBAN (Pendapatan Diterima Dimuka) → Kredit, bukan Pendapatan Jasa. Kas bertambah → Debit. Baru diakui sebagai pendapatan setelah pekerjaan selesai.",
+    xp: 40
+  },
+  {
+    id: 11,
+    kategori: "Akuntansi Dasar",
+    kategori_icon: "📝",
+    kategori_color: "tag-teal",
+    pertanyaan: "Tanggal 10 Februari, perusahaan membayar tagihan listrik dan air kantor bulan Januari sebesar Rp 1.200.000 secara tunai.",
+    hint: "Tagihan listrik & air yang dibayar = Beban Listrik & Air.",
+    jawaban_benar: [
+      { akun: "5103", posisi: "debit",  nominal: 1200000 },
+      { akun: "1101", posisi: "kredit", nominal: 1200000 }
+    ],
+    penjelasan_error: "Pembayaran tagihan listrik & air adalah Beban Listrik & Air (Beban) → Debit. Kas (Aset) berkurang → Kredit.",
+    xp: 20
+  },
+  {
+    id: 12,
+    kategori: "Akuntansi Dasar",
+    kategori_icon: "📝",
+    kategori_color: "tag-teal",
+    pertanyaan: "Tanggal 14 Februari, PT Maju melunasi piutang usaha atas jasa konsultansi bulan lalu sebesar Rp 20.000.000 secara transfer bank.",
+    hint: "Piutang yang sudah dibayar → Piutang berkurang, Kas di Bank bertambah.",
+    jawaban_benar: [
+      { akun: "1102", posisi: "debit",  nominal: 20000000 },
+      { akun: "1103", posisi: "kredit", nominal: 20000000 }
+    ],
+    penjelasan_error: "Saat piutang dilunasi via transfer: Kas di Bank (Aset) bertambah → Debit. Piutang Usaha (Aset) berkurang → Kredit. Pendapatan TIDAK dicatat lagi karena sudah diakui saat jasa diberikan.",
+    xp: 35
+  },
+  {
+    id: 13,
+    kategori: "Perpajakan",
+    kategori_icon: "🏛️",
+    kategori_color: "tag-navy",
+    pertanyaan: "Perusahaan menjual jasa senilai Rp 5.000.000 kepada pelanggan. Atas transaksi ini dikenakan PPN 11%. Pembayaran diterima tunai termasuk PPN.",
+    hint: "Total diterima = Rp 5.000.000 + PPN 11% = Rp 5.550.000. PPN Keluaran adalah kewajiban.",
+    jawaban_benar: [
+      { akun: "1101", posisi: "debit",  nominal: 5550000 },
+      { akun: "4101", posisi: "kredit", nominal: 5000000 },
+      { akun: "2103", posisi: "kredit", nominal: 550000  }
+    ],
+    penjelasan_error: "Kas bertambah Rp 5.550.000 (termasuk PPN) → Debit. Pendapatan Jasa hanya Rp 5.000.000 → Kredit. PPN Keluaran Rp 550.000 (11% × Rp 5 jt) adalah Utang Pajak → Kredit. Total Debit = Total Kredit = Rp 5.550.000.",
+    xp: 50
+  },
+  {
+    id: 14,
+    kategori: "Perpajakan",
+    kategori_icon: "🏛️",
+    kategori_color: "tag-navy",
+    pertanyaan: "Perusahaan membayar jasa konsultan IT dari pihak luar sebesar Rp 8.000.000. Atas pembayaran ini dipotong PPh Pasal 23 sebesar 2%. Pembayaran dilakukan via transfer bank.",
+    hint: "PPh 23 = 2% × Rp 8.000.000 = Rp 160.000. Yang ditransfer = Rp 8.000.000 - Rp 160.000 = Rp 7.840.000.",
+    jawaban_benar: [
+      { akun: "5102", posisi: "debit",  nominal: 8000000 },
+      { akun: "1102", posisi: "kredit", nominal: 7840000 },
+      { akun: "2103", posisi: "kredit", nominal: 160000  }
+    ],
+    penjelasan_error: "Beban Jasa dicatat penuh Rp 8.000.000 → Debit. Kas di Bank berkurang hanya Rp 7.840.000 (setelah dipotong PPh 23) → Kredit. PPh 23 yang dipotong Rp 160.000 menjadi Utang Pajak → Kredit.",
+    xp: 55
+  },
+  {
+    id: 15,
+    kategori: "Keuangan",
+    kategori_icon: "💰",
+    kategori_color: "tag-emerald",
+    pertanyaan: "Tanggal 28 Februari, perusahaan mencatat penyusutan peralatan kantor (komputer) untuk bulan Februari sebesar Rp 200.000.",
+    hint: "Penyusutan = Beban Penyusutan (Debit) dan Akumulasi Penyusutan (Kredit). Tidak ada kas yang keluar!",
+    jawaban_benar: [
+      { akun: "5105", posisi: "debit",  nominal: 200000 },
+      { akun: "1204", posisi: "kredit", nominal: 200000 }
+    ],
+    penjelasan_error: "Penyusutan dicatat sebagai Beban Penyusutan → Debit. Akumulasi Penyusutan Peralatan (kontra aset) → Kredit. Tidak ada kas yang keluar karena ini adalah jurnal penyesuaian non-kas.",
+    xp: 45
+  },
+  {
+    id: 16,
+    kategori: "Keuangan",
+    kategori_icon: "💰",
+    kategori_color: "tag-emerald",
+    pertanyaan: "Perusahaan mendapatkan pinjaman dari Bank Mandiri sebesar Rp 100.000.000 untuk modal kerja. Dana langsung masuk ke rekening bank perusahaan.",
+    hint: "Pinjaman bank = Kas di Bank bertambah (Debit), Utang Bank Jangka Panjang bertambah (Kredit).",
+    jawaban_benar: [
+      { akun: "1102", posisi: "debit",  nominal: 100000000 },
+      { akun: "2201", posisi: "kredit", nominal: 100000000 }
+    ],
+    penjelasan_error: "Penerimaan pinjaman bank: Kas di Bank (Aset) bertambah → Debit. Utang Bank Jangka Panjang (Kewajiban) bertambah → Kredit. Pinjaman adalah kewajiban, bukan pendapatan!",
+    xp: 35
   }
 ];
 
